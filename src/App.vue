@@ -1,26 +1,51 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <NavigationBar :logo="logo_src" :alt="app_name"/>
+    <router-view/>
+    <RodaPe/>
+  </div>
 </template>
 
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+import NavigationBar from './components/NavigationBar.vue';
+import RodaPe from './components/RodaPe.vue';
+
+  export default {
+    name: 'App',
+    components: {
+      NavigationBar,
+      RodaPe
+    },
+    data () {
+      return {
+        logo_src: "/img/logo.png",
+        app_name: "Make Your Gurguer"
+      }
+    }
   }
-}
-</script>
 
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+.main__container{
+  margin: 50px;
+ height: 100vh;
+}
+
+h1{
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 30px ;
+  color: #222;
+}
+
 </style>
