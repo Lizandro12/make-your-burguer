@@ -105,8 +105,16 @@ export default {
                 this.msg = "";
             },3000)
 
-            this.nome = "";
+            this.resetVariables();
 
+        },
+        resetVariables(){
+
+            this.pao = null;
+            this.carne = null;
+            this.nome = "";
+            this.opcionais = []
+        
         }
     },
     mounted(){
