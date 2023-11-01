@@ -38,7 +38,7 @@ import RodaPe from './components/RodaPe.vue';
 
 .main__container{
   margin: 50px;
- height: 100vh;
+ height: auto;
 }
 
 h1{

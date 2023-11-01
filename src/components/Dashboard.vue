@@ -144,14 +144,18 @@ export default {
 
 .burger__table__row{
     width: 100%;
+    height: 150px;
     padding: 12px;
     border-bottom: solid 1px #ccc;
+    display: flex;
+    align-content: center;
 }
 
 
 select {
     padding:6px ;
     margin-right: 8px;
+    border-radius: 4px;
 }
 
 .delete__pedido{
@@ -164,6 +168,7 @@ select {
     margin: 0 auto;
     cursor: pointer;
     transition: 0.5s;
+    border-radius: 4px;
 }
 
 .delete__pedido:hover{

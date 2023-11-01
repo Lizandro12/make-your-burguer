@@ -6,7 +6,7 @@
 
                 <div class="input__container">
                     <label for="name">Nome do cliente</label>
-                    <input type="text" name="name" id="name" v-model="nome" placeholder="Digite o seu nome">
+                    <input type="text" name="name" id="name" v-model="nome" placeholder="Digite o seu nome" class="input__name">
                 </div>
 
                 <div class="input__container">
@@ -148,6 +148,23 @@ label{
 input[type="text"],input[type="submit"], select {
     padding: 5px 10px;
     width: 300px;
+}
+
+.input__name{
+    border:solid 1px silver;
+    border-radius: 4px;
+    transition: all .5s;
+    outline: none;
+    height: 45px;
+}
+
+.input__name:focus{
+    border: solid 1px #fcba03;
+}
+
+.input__name::placeholder{
+    font-size: 10pt;
+    color: #8d8c8c;
 }
 
 #opcionais__container{
