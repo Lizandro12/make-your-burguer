@@ -11,18 +11,18 @@
 
                 <div class="input__container">
                     <label for="pao">Escolha o Pão</label>
-                    <select name="pao" id="pao" v-model="pao">
-                    <option value="null">--Selecione o seu pão--</option>
-                    <option :value="pao.tipo" v-for="pao in paes" :key="pao.id">{{pao.tipo}}</option>
+                    <select name="pao" id="pao" v-model="pao" class="input_select">
+                    <option value="null" class="input__select__option">--Selecione o seu pão--</option>
+                    <option :value="pao.tipo" v-for="pao in paes" :key="pao.id" class="input__select__option">{{pao.tipo}}</option>
                     </select>
                 </div>
 
                
                 <div class="input__container">
                     <label for="carne">Escolha a Carne</label>
-                    <select name="carne" id="carne" v-model="carne">
-                    <option value="null">--Selecione o tipo de carne--</option>
-                    <option :value="carne.tipo" v-for="carne in carnes" :key="carne.id">{{carne.tipo}}</option>
+                    <select name="carne" id="carne" v-model="carne" class="input_select">
+                    <option value="null" class="input__select__option">--Selecione o tipo de carne--</option>
+                    <option :value="carne.tipo" v-for="carne in carnes" :key="carne.id" class="input__select__option">{{carne.tipo}}</option>
                     </select>
                 </div>
 
@@ -167,6 +167,22 @@ input[type="text"],input[type="submit"], select {
     color: #8d8c8c;
 }
 
+.input_select{
+    border:solid 1px silver;
+    border-radius: 4px;
+    height: 45px;
+    outline: none;
+    cursor: pointer;
+}
+
+.input_select:focus{
+    border: solid 1px #fcba03;
+}
+
+.input__select__option{
+    color: #8d8c8c;
+}
+
 #opcionais__container{
     flex-direction: row;
     flex-wrap: wrap;
@@ -174,7 +190,7 @@ input[type="text"],input[type="submit"], select {
 
 .check__box__container{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     width: 50%;
     margin-bottom: 20px ;
 }
@@ -203,6 +219,7 @@ input[type="text"],input[type="submit"], select {
     margin: 0 auto;
     cursor: pointer;
     transition: 0.5s;
+    border-radius: 4px;
 }
 
 .submit__btn:hover{
