@@ -85,7 +85,7 @@ export default {
 
             this.getPedidos();
         },
-        async update(event, id){
+    async update(event, id){
             const option = event.target.value;
 
             const dataJson = JSON.stringify({
